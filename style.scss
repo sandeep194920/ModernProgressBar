@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+$blue: rgb(28, 48, 223);
+$pink: rgb(116, 10, 165);
+$white: rgb(243, 250, 247);
+$pinkOne: rgb(152, 35, 230);
+$pinkTwo: rgb(99, 21, 151);
+
+body {
+  background-image: linear-gradient(125deg, rgba($blue, 0.8), rgba($pink, 0.8));
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  color: $white;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 7rem;
+  font-size: 1.5rem;
+}
+
+.progress-container {
+  display: flex;
+  width: 40%;
+  color: $white;
+  justify-content: center;
+  margin: 4rem auto;
+}
+.stage {
+  margin: 3rem 6rem;
+  position: relative;
+  &__num {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  &__circle {
+    border: 3px solid $pink;
+    background-color: $pink;
+    padding: 0.5rem;
+    position: absolute;
+    border-radius: 100%;
+    left: -3px;
+    top: 3rem;
+  }
+  &__line {
+    border-bottom: 4px solid grey;
+    position: absolute;
+    width: 11.3rem;
+    left: 20px;
+    top: 3.7rem;
+
+    &--hidden {
+      display: none;
+    }
+  }
+}
+.btn-container {
+  color: black;
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.btn {
+  --border-size: 2px;
+  margin: 1rem 2rem;
+  background-color: $pinkOne;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  flex-basis: 5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  position: relative;
+  color: $white;
+  box-shadow: 1px 2px 0 0.4px black;
+}
+
+.notselected,
+.selectline {
+  border-bottom: 4px solid grey;
+  position: absolute;
+  width: 11.3rem;
+  left: 20px;
+  top: 3.7rem;
+}
+
+.selectline {
+  border-bottom: 4px solid $white;
+  transition: all 2s ease;
+  transform-origin: left;
+}
