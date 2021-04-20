@@ -12,18 +12,22 @@ function setBtn() {
     if (counter === 0) {
         //disable prev btn
         prevBtn.style.backgroundColor = '#ccc'
-    } else {
-        prevBtn.style.backgroundColor = 'rgb(152, 35, 230)'
+    }
+    else {
+        // prevBtn.style.backgroundColor = 'rgb(152, 35, 230)' // note that if you set back to a color, then css hover doesnt work. So leave it as is like below
+        prevBtn.style.backgroundColor = ''
     }
     if (counter === 3) {
         // disable next btn
         nextBtn.style.backgroundColor = '#ccc'
-    } else {
-        nextBtn.style.backgroundColor = 'rgb(152, 35, 230)'
-
+    }
+    else {
+        nextBtn.style.backgroundColor = ''
+        // nextBtn.style.backgroundColor = 'rgb(152, 35, 230)'
     }
 }
 setBtn()
+
 
 nextBtn.addEventListener('click', function () {
     if (counter === 3) return
